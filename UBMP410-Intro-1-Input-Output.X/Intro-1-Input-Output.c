@@ -53,7 +53,22 @@ int main(void)
         }
         
         // Add code for your Program Analysis and Programming Activities here:
+if(SW2 == 0)
+        {
+            LED3 = 1;
+            LED5 = 1;
+            __delay_ms(100);
+            LED6 = 1;
+            LED4 = 1;
+            __delay_ms(100);
+            LED5 = 0;
+            LED4 = 0;
+            __delay_ms(100);
+            LED3 = 0;
+            LED6 = 0;
+            __delay_ms(100);
 
+        // New code has been made here
         // Activate bootloader if SW1 is pressed.
         if(SW1 == 0)
         {
@@ -67,9 +82,9 @@ int main(void)
  * 1. How many times do the LEDs flash if SW2 is quickly pressed and released?
  *    Do the LEDs keep flashing when SW2 is held? Look at the program and
  *    explain why this happens when SW2 is held.
- * 
+ ~ LEDs flash once every time the button is pressed.
  * 2. Explain the difference between the statements: LED3 = 0; and LED3 = 1;
- * 
+ * ~ When it's LED3 = 0; the led is turned off and when it's lED = 1; the led is turned on.
  * 3. What voltage do you expect the microcontroller to output to LED D3 when
  *    the statement LED3 = 0; runs? What voltage do you expect the output to be
  *    when the statement LED3 = 1; runs?
@@ -80,7 +95,7 @@ int main(void)
  * 4. The statement 'if(SW2 == 0)' uses two equal signs, while the statement
  *    'LED3 = 1;' uses a single equal sign. What operation is performed by one
  *    equal sign? What operation is performed by two equal signs?
- * 
+ * ~ The single equal makes things equal. The 2 equal signs makes sure things are equal. 
  * 5. The following program code includes instructions that write to the PORTC
  *    output latches directly. Try it by copying and pasting this code below
  *    the existing SW2 'if' structure, at the location shown by the comment.
