@@ -84,11 +84,11 @@ if(SW2 == 0)
  *    explain why this happens when SW2 is held.
  ~ LEDs flash once every time the button is pressed.
  * 2. Explain the difference between the statements: LED3 = 0; and LED3 = 1;
- * ~ When it's LED3 = 0; the led is turned off and when it's lED = 1; the led is turned on.
+ ~ When it's LED3 = 0; the led is turned off and when it's lED = 1; the led is turned on.
  * 3. What voltage do you expect the microcontroller to output to LED D3 when
  *    the statement LED3 = 0; runs? What voltage do you expect the output to be
  *    when the statement LED3 = 1; runs?
- * 
+ ~ When the statement LED3 = 0; is running, the microcontroller shouldn't output any voltage to LED3. 
  *    You can confirm the output voltage with a voltmeter if you have access
  *    to one. If you tried that, did the voltage match your prediction?
  * 
@@ -111,7 +111,7 @@ if(SW2 == 0)
  *    What happens when pushbutton SW3 is pressed? Identify at least one
  *    advantage and one disadvantage of controlling the LEDs using 'LATC' writes
  *    rather than through individual 'LEDn = x;' statements.
- * 
+ ~
  * 6. Next, compare the operation of 'if' and 'while' structures to simulate
  *    momentary buttons. Replace the code you added in 5, above, with this code:
 
@@ -192,7 +192,7 @@ if(SW2 == 0)
         }
         else
         {
-            LED4 = 0;
+            LED4 = 0;6
         }
 
  *    Describe the conditions under which LED4 turns on.
