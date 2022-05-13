@@ -53,20 +53,21 @@ int main(void)
         }
         
         // Add code for your Program Analysis and Programming Activities here:
-if(SW2 == 0)
+                if(SW3 == 0)
         {
-            LED3 = 1;
-            LED5 = 1;
-            __delay_ms(100);
-            LED6 = 1;
             LED4 = 1;
-            __delay_ms(100);
-            LED5 = 0;
+        }
+        else
+        {
             LED4 = 0;
-            __delay_ms(100);
-            LED3 = 0;
-            LED6 = 0;
-            __delay_ms(100);
+        }
+
+        // Momentary button using while structure
+        while(SW4 == 0)
+        {
+            LED5 = 1;
+        }
+        LED5 = 0;
 
         // New code has been made here
         // Activate bootloader if SW1 is pressed.
@@ -111,7 +112,8 @@ if(SW2 == 0)
  *    What happens when pushbutton SW3 is pressed? Identify at least one
  *    advantage and one disadvantage of controlling the LEDs using 'LATC' writes
  *    rather than through individual 'LEDn = x;' statements.
- ~
+ ~ All the LEDs turn on. Using LATC, it uses less lines. But, you wouldn't be able
+ ~ to turn whichever LED you wanted. 
  * 6. Next, compare the operation of 'if' and 'while' structures to simulate
  *    momentary buttons. Replace the code you added in 5, above, with this code:
 
@@ -140,7 +142,7 @@ if(SW2 == 0)
  *    Next, try press and holding SW4 while pressing and releasing SW3. Does it
  *    work as expected? Explain the difference in operation between the 'if' and
  *    'while' structures making up the momentary button code.
- * 
+ ~ it doesn't work as expected. 
  * 7. Let's explore logical conditions using 'if' statements. Replace the code
  *    added in 6, above, with this nested if code to make a logical AND
  *    condition that will light LED D4 only if both SW3 and SW4 are pressed:
@@ -164,7 +166,7 @@ if(SW2 == 0)
 
  *    Test the code to ensure it works as expected. Does the order of the if
  *    conditions matter? (eg. swap the conditional checks for SW3 and SW4)
- * 
+ ` The order of the conditions doesn't matter. 
  * 8. Next, replace the code from 7 with the following code which implements a
  *    logical AND conditional operator composed of two ampersands '&&':
  
@@ -181,7 +183,7 @@ if(SW2 == 0)
  *    Does '&&' work the same way as the nested if structures? Can you think of
  *    at least one advantage of using a logical conditional operator instead of
  *    nested if structures?
- * 
+ ` The '&&' works the same way as the nested if structure. 
  * 9. Replace the double ampersand '&&' with double vertical bars '||)' to make
  *    a logical OR conditional operator. Your code should look like this:
   
@@ -195,7 +197,7 @@ if(SW2 == 0)
             LED4 = 0;6
         }
 
- *    Describe the conditions under which LED4 turns on.
+ *    Describe the conditions under which LED4 turns on. 
  * 
  * 
  * Programming Activities
