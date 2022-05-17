@@ -32,51 +32,10 @@ int main(void)
     while(1)
 	{
         // If SW2 is pressed, make a flashy light pattern
-        if(SW5 == 0)
-        {
-            LED3 = 1;
-            __delay_ms(100);
-            LED4 = 1;
-            __delay_ms(100);
-            LED5 = 1;
-            __delay_ms(100);
-            LED6 = 1;
-            __delay_ms(100);
-            LED3 = 0;
-            __delay_ms(100);
-            LED4 = 0;
-            __delay_ms(100);
-            LED5 = 0;
-            __delay_ms(100);
-            LED6 = 0;
-            __delay_ms(100);
-        }
-        
         // Add code for your Program Analysis and Programming Activities here:
-        // Make a tone while SW5 is held
-        if (SW2 == 0)
-        {
-            LED3 = 1;
-            LED3 = 0;
-            __delay_ms(100);
-            LED5 = 1;
-            LED5 = 0;
-            __delay_ms(100);
-            LED4 = 1;
-            LED4 = 0;
-            __delay_ms(100);
-            LED6 = 1;
-            LED6 =0;
-            __delay_ms(100);
-            LED3 = 1;
-            LED3 = 0;
-            __delay_ms(100);
-        }
-
         // New code has been made here
         // Activate bootloader if SW1 is pressed.
-        if(SW1 == 0)
-        {
+        if(SW1 == 0) {
             RESET();
         }
     }
@@ -254,11 +213,96 @@ int main(void)
  * 
  * 4. Using modified versions of the original SW2 'if' structure, create a
  *    program that makes a unique LED flashing pattern for each pushbutton.
- * 
+ *        if(SW3 == 0)
+        {
+            LED4 = 1;
+            __delay_ms(150);
+            LED3 = 1;
+            __delay_ms(150);
+            LED5 = 1;
+            __delay_ms(150);
+            LED6 = 1;
+            __delay_ms(150);
+            LED4 = 0;
+            __delay_ms(150);
+            LED3 = 0;
+            __delay_ms(150);
+            LED5 = 0;
+            __delay_ms(150);
+            LED6 = 0;
+            __delay_ms(150);
+            LED6 = 1;
+            __delay_ms(150);
+            LED4 = 1;
+            __delay_ms(150);
+            LED3 = 1;
+            __delay_ms(150);
+            LED5 = 1;
+            __delay_ms(150);
+            LED6 = 1;
+            __delay_ms(150);
+            LED6 = 0;
+            __delay_ms(150);
+            LED4 = 0;
+            __delay_ms(150);
+            LED3 = 0;
+            __delay_ms(150);
+            LED5 = 0;
+            __delay_ms(150);
+            LED6 = 0;
+            __delay_ms(150);
+
+        }
+        if (SW2 == 0)
+        {
+            LED3 = 1;
+            LED6 = 1;
+            __delay_ms(150);
+            LED3 = 0;
+            LED6 = 0;
+            __delay_ms(90);
+            LED4 = 1;
+            LED5 = 1;
+            __delay_ms(150);
+            LED4 = 0;
+            LED5 = 0;
+            __delay_ms(90);
+            LED5 = 1;
+            LED6 = 1;
+            __delay_ms(150);
+            LED5 = 0;
+            LED6 = 0;
+            __delay_ms(90);
+            LED4 = 1;
+            LED3 = 1;
+            __delay_ms(150);
+            LED4 = 0;
+            LED3 = 0;
+            __delay_ms(90);
+        }
+        if (SW4 == 0 || SW5 == 0);
+        {
+            LED5 = 1;
+            LED3 = 1;
+            __delay_ms(150);
+            LED5 = 0;
+            LED3 = 0;
+            __delay_ms(90);
+            LED4 = 1;
+            LED6 = 1;
+            __delay_ms(150);
+            LED4 = 0;
+            LED6 = 0;
+            __delay_ms(90);
+        }
+
  *    Test each of your flashing patterns. Describe what happens when more than
  *    one button is held. Do all of the patterns try to flash the LEDs at the
  *    same time, or sequentially? Explain why this is.
- ~ It gave me weird pattern when tried to program 
+ ~ When I am not pressing any button, all the LEDs are running in the pattern
+ ~ that I created it. When I press 2 buttons at the same time, it runs the code that those 2 buttons
+ ~ are programmed, the same goes for 3 buttons being held. When I hold all buttons, the code that I created
+ ~ are executed in order.  
  * 5. Create a program that makes a different tone for each pushbutton.
  * 
  *    Test each tone by pressing each button individually. Next, press two or
