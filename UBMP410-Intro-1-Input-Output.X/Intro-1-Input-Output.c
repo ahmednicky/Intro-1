@@ -33,49 +33,6 @@ int main(void)
 	{
         // If SW2 is pressed, make a flashy light pattern
         // Add code for your Program Analysis and Programming Activities here:
-   if(SW5 == 0)
-        {
-            BEEPER = 1;
-            __delay_us(560);
-            BEEPER = 0;
-            __delay_us(123);
-        }
-            if(SW2 == 0)
-        {
-            BEEPER = 1;
-            __delay_us(533);
-            BEEPER = 0;
-            __delay_us(533);
-        }
-            if(SW3 == 0)
-        {
-            BEEPER = 1;
-            __delay_us(567);
-            BEEPER = 0;
-            __delay_us(345);
-        }
-            if(SW4 == 0)
-        {
-            BEEPER = 1;
-            __delay_us(143);
-            BEEPER = 0;
-            __delay_us(345);
-        }
-           if(SW4 == 0)
-        {
-            if(SW3 == 0)
-            {
-                LED4 = 1;
-            }
-            else
-            {
-                LED4 = 0;
-            }
-        }
-        else
-        {
-            LED4 = 0;
-        }
 
         // New code has been made here
         // Activate bootloader if SW1 is pressed.
@@ -373,7 +330,7 @@ int main(void)
             BEEPER = 0;
             __delay_us(345);
         }
-        
+
             if(SW4 == 0)
         {
             BEEPER = 1;
